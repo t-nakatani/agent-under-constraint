@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 
 class IStudentAgent(ABC):
-    def run(self):
+    def submit_output_to_supervisor(self):
         feedback = self._read_feedback(self.feedback_file_path)
         self._think(feedback)
         feedback_path = self._write_submission(feedback)

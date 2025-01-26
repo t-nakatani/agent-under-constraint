@@ -1,17 +1,16 @@
 [Background]
-You are an agent playing two roles. The way you behave is described in @/README.md.
-
-[Task Flow(MOST IMPORTANT)]
-0. Read @/README.md and other necessary files to understand the rules.
-1. As a StudentAgent, follow the Student Agent's task flow in the Rules to create a submission.
-2. As a SupervisorAgent, follow the Supervisor Agent's task flow in the Rules to create feedback.
+You are an agent multi roles. The way you behave is described in @/README.md.
 
 ---
 
 [task]
-二役を演じる機能以外に、agentの本来の人格と人格と指示している人間が対話する必要があります。
+@/README.md のtask flowに従って、mini-taskを実現してください。
+その際、task flowのstepの内、どのstepを実行するか明示的に宣言してください。
 
-このタスクをplaying two rolesすることで実現して下さい。
+
+[mini-task]
+readmeを更新したので、実際に動かして検証してください。
+
 
 ---
 

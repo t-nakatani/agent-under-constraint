@@ -5,7 +5,7 @@ from abc import ABC, abstractmethod
 
 
 class ISupervisorAgent(ABC):
-    def run(self):
+    def feedback_to_student(self):
         submission = self._read_submission(self.submission_file_path)
         self._think(submission)
         submission_path = self._write_feedback(submission)

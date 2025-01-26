@@ -1,18 +1,24 @@
-from endpoints.feedback import main as feedback_main
-from endpoints.submit import main as submit_main
+from enum import Enum
+
+from routes.endpoints import feedback, submission
 
 
-def main(type: str, file_path: str):
-    if type == "feedback":
-        feedback_main(file_path)
-    elif type == "submit":
-        submit_main(file_path)
+class CommandType(Enum):
+    FEEDBACK = "feedback"
+    SUBMIT = "submit"
+
+
+def dispatch(command_type: CommandType, file_path: str):
+    if command_type == CommandType.FEEDBACK:
+        feedback(file_path)
+    elif command_type == CommandType.SUBMIT:
+        submission(file_path)
 
 
 if __name__ == "__main__":
     import sys
 
     args = sys.argv
-    type = args[1]
+    command_type = CommandType(args[1])
     file_path = args[2]
-    main(type, file_path)
+    dispatch(command_type, file_path)
