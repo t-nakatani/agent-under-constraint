@@ -1,0 +1,44 @@
+# Feedback Format
+# フィードバックのテンプレート
+# バージョン: 1.0.0
+
+# 基本情報（必須）
+feedback_number = "xxx" # 数値を文字列として指定（例: "1", "2"）
+target_submission = "xxx" # 対象の提出物番号
+
+[reason]
+is_valid = true # 理由が適切かどうか
+description = """submissionの達成したい理由が正しいか・目的と合っているかをフィードバック"""
+
+[objective]
+is_valid = true # 目的が適切かどうか
+description = """submissionの達成したいことが、SupervisorAgent独自の視点でずれていないかをフィードバック"""
+
+[method]
+is_feasible = true # 方法が実現可能かどうか
+description = """submissionのObjectiveとReasonをこのMethodによって達成できそうかをフィードバック"""
+
+[result]
+description = "" # 任意：結果に対するフィードバック
+
+[improvement]
+points = [
+    # 例：
+    # { priority = 1, point = "改善点1", description = "詳細な説明" },
+]
+
+[notes]
+important_points = []
+additional_notes = []
+
+[evaluation]
+good_points = []
+improvement_points = []
+
+[proposal]
+advice = []
+resources = []
+
+[overall]
+achievement_level = "C" # 必須: "S" | "A" | "B" | "C" | "D"
+comment = "" # 必須：総合評価のコメント

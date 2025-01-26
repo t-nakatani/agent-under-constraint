@@ -1,0 +1,42 @@
+# Submission Format
+# 提出物のテンプレート
+# バージョン: 1.0.0
+
+# 基本情報（必須）
+submission_number = "xxx" # 数値を文字列として指定（例: "1", "2"）
+
+# 提出内容
+[reason]
+description = """なぜ達成したいのか記載、具体的な背景や動機を説明"""
+
+[objective]
+# 達成目標は配列として管理し、個別に追跡可能に
+# 優先度が高い順に並べる
+objectives = [
+    "達成したい目標1",
+    "達成したい目標2",
+]
+
+[method]
+description = """どのように達成したいのか具体的な手順や方法を説明、ObjectiveとReasonをこのMethodによって達成できる必要がある"""
+
+# コードサンプルがある場合は個別のセクションに
+code_samples = [
+    # 例：
+    # { language = "python", code = "print('Hello')" },
+]
+
+[result]
+description = "" # 任意：結果がある場合のみ記載
+
+[improvement]
+# 前回のフィードバックに基づく改善点（任意）
+points = [
+    # 例：
+    # { point = "改善点1", description = "詳細な説明" },
+]
+
+[notes]
+# 重要な注意点や補足（任意）
+important_points = []
+additional_notes = []
